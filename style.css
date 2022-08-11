@@ -1,0 +1,110 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cardLayers{   
+    text-align: center;
+    position: relative;
+}
+.background__igm-bg-card-back{    
+    position: absolute;
+    right: 245px;
+    bottom: 55px;
+    width: 285px;
+}
+.background__igm-bg-card-front{    
+    position: absolute;    
+    left: 245px;
+    bottom: -38px;
+    width: 288px;
+}
+.cardLayers__cardLayers__svv{
+    position: absolute;    
+    top: 104px;
+    right: 280px;
+    color: white;
+}
+.card-front__card_label{
+    position: absolute; 
+    color: white;
+}
+.card-front__card_label--logo{
+    left: 250px;
+    top: 135px;
+    transform: scale(0.65);
+}
+.card-front__card_label--cardholders_name{
+    left: 265px;
+    top: 248px;
+    font-size: 13px;
+    font-family: 'Cuprum', sans-serif;
+    letter-spacing: 1px;
+}
+.card-front__card_label--cardholders_card-number{    
+    top: 212px;
+    left: 266px;
+    letter-spacing: 3.5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-front__card_label--cardholders_exp-date{    
+    top: 250px;
+    left: 477px;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+.fill_out_form{
+    margin-top: 85px;
+    text-align: center;
+}
+.form_block{
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    margin: 23px auto;
+    width: 330px;
+}
+.form_block label{
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.form_block input{
+    border-radius: 5px;
+    height: 37px;
+    border: 1px solid #dfdfdf;
+}
+.form_block input::placeholder{
+    font-size: 17px;
+    letter-spacing: 1.1px;    
+    padding-left: 14px;
+}
+.exp_date_input_container{
+    display: flex;
+    gap: 10px;
+}
+.exp_date{
+    width: 65px;
+}
+.exp_date--cvc{
+    width: 155px;
+}
+.form_block--exp{
+    display: inline-flex;
+    width: 160px;
+    margin: 0px;
+}
+.fill_out_form__button{
+    display: block;
+    margin: 0 auto;
+    width: 330px;
+    height: 52px;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: #1d0a2e;
+    font-size: 19px;
+}
