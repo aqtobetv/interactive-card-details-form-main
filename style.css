@@ -2,17 +2,31 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Cuprum', sans-serif;
 }
 
-.cardLayers{   
-    text-align: center;
+.cardLayers{         
+    width: 375px;
+    margin: 0 auto;
+    height: 245px;
     position: relative;
 }
 .background__igm-bg-card-back{    
     position: absolute;
-    right: 245px;
-    bottom: 55px;
+    right: 90px;
     width: 285px;
+}
+.card-background{
+    position: absolute;
+    width: 285px;
+    left: 165px;
+    top: 35px;
+}
+.card-front{
+    position: absolute;
+    width: 288px;
+    right: 320px;
+    top: 250px;
 }
 .background__igm-bg-card-front{    
     position: absolute;    
@@ -21,9 +35,9 @@ body {
     width: 288px;
 }
 .cardLayers__cardLayers__svv{
-    position: absolute;    
-    top: 104px;
-    right: 280px;
+    position: absolute;   
+    right: 127px;
+    top: 68px;
     color: white;
 }
 .card-front__card_label{
@@ -31,26 +45,25 @@ body {
     color: white;
 }
 .card-front__card_label--logo{
-    left: 250px;
-    top: 135px;
+    left: 255px;
+    bottom: 60px;  
     transform: scale(0.65);
 }
-.card-front__card_label--cardholders_name{
-    left: 265px;
-    top: 248px;
+.card-front__card_label--cardholders_name {
+    left: 268px;
+    width: 300px;
     font-size: 13px;
     font-family: 'Cuprum', sans-serif;
     letter-spacing: 1px;
 }
-.card-front__card_label--cardholders_card-number{    
-    top: 212px;
-    left: 266px;
-    letter-spacing: 3.5px;
-    font-weight: bold;
-    font-size: 20px;
+.card-front__card_label--cardholders_card-number {
+    width: 400px;
+    bottom: 15px;
+    left: 270px;
+    letter-spacing: 4.4px;
+    font-size: 18px;
 }
-.card-front__card_label--cardholders_exp-date{    
-    top: 250px;
+.card-front__card_label--cardholders_exp-date{       
     left: 477px;
     letter-spacing: 1.5px;
     font-size: 12px;
@@ -59,12 +72,22 @@ body {
     margin-top: 85px;
     text-align: center;
 }
-.form_block{
+.form_block {
     display: flex;
     font-weight: bold;
     flex-direction: column;
-    margin: 23px auto;
+    margin: 10px auto;
     width: 330px;
+    letter-spacing: 2.8px;
+}
+.form_block p {
+    margin: 0;
+    margin-top: 5px;
+    color: red;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+    display: none;
 }
 .form_block label{
     text-align: left;
@@ -84,7 +107,8 @@ body {
 }
 .exp_date_input_container{
     display: flex;
-    gap: 10px;
+    gap: 0px 10px;
+    flex-wrap: wrap;
 }
 .exp_date{
     width: 65px;
@@ -102,9 +126,159 @@ body {
     margin: 0 auto;
     width: 330px;
     height: 52px;
-    margin-top: 30px;
+    margin-top: 15px;
     border-radius: 5px;
     color: white;
     background-color: #1d0a2e;
     font-size: 19px;
+}
+.thank-you-block{
+    display: none;
+    height: 225px;
+}
+
+.thank-you-block h1{
+    margin-top: 36px;
+    font-size: 1.8em;   
+    height: auto;   
+    letter-spacing: 5px;    
+}
+.thank-you-block p{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: bold;   
+    color: #858388; 
+}
+@media only screen and (min-width: 1200px) {  
+    
+    .cardLayers{
+        margin: 0;
+        height: 100vh;
+    }
+    .background__igm-bg-card-back{
+        left: 0;       
+        width: 100%;             
+        transform: scale(1.57);   
+    }
+    .card-background { 
+        z-index: 3;      
+        width: 285px;
+        height: 156px;
+        left: 336px;
+        top: 515px;
+    }
+    .cardLayers__cardLayers__svv {       
+        top: 66px;
+        left: 280px;
+        font-size: 19px;        
+    }
+    .card-front {
+        z-index: 3;
+        height: 248px;
+        width: 452px;
+        left: 161px;
+        top: 147px;
+    }
+    .card-front__card_label--cardholders_card-number {
+        width: 400px;
+        bottom: -10px;
+        left: -74px;
+        letter-spacing: 5.4px;
+        font-size: 28px;
+    }
+    .background__igm-bg-card-front {
+        left: 0;       
+        width: 100%;        
+    }   
+    .card-front__card_label--logo {
+        left: 36px;
+        top: 67px;       
+        transform: scale(1);
+    } 
+    .card-front__card_label--cardholders_name {
+        left: 35px;
+        width: 300px;
+        bottom: -10px;
+        font-size: 16px;
+        letter-spacing: 3.5px;
+    }
+    .card-front__card_label--cardholders_card-number {
+        width: 400px;
+        bottom: 35px;
+        left: 36px;
+        letter-spacing: 6.8px;
+        font-size: 28px;
+    }
+    .card-front__card_label--cardholders_exp-date {
+        left: 368px;
+        letter-spacing: 3.4px;
+        font-size: 13px;
+        bottom: -9px;
+        font-family: inherit;
+    }
+    
+    .fill_out_form {
+        margin-top: 0px;
+        padding-top: 256px;
+        text-align: right;      
+        padding-right: 50px;
+        padding-left: 280px;
+        width: 455px;;
+        height: 645px;
+        position: absolute;
+        background-color: white;
+        top: 0;
+        right: 0;
+    }
+    .form_block {
+        display: flex;
+        font-weight: bold;
+        flex-direction: column;
+        margin: 25px auto 0 auto;
+        width: 330px;        
+    }
+    .fill_out_form__button {
+        margin-left: 68px;
+        margin-top: 40px;
+        width: 375px;
+    }
+    .form_block--exp {
+        display: inline-flex;
+        width: 194px;
+        margin: 0px;
+        margin-top: 28px;
+    }
+    .form_block input {        
+        width: 375px;        
+    }
+    .exp_date_input_container .exp_date{
+        width: 75px;
+    }
+    #exp_date--cvc{
+        width: 176px;
+    }
+    .thank-you-block{
+        display: none;
+        height: 200px;
+        padding-top: 50px;
+        text-align: center;
+        width: 520px;
+    }
+}
+@media only screen and (min-width: 1400px) {  
+    .fill_out_form {          
+        padding-right: 200px;       
+    }
+    .thank-you-block{
+        display: none;
+        height: 200px;
+        padding-top: 50px;
+        text-align: center;
+        width: 520px;
+    }
+}
+@media only screen and (min-width: 1600px) {  
+    .fill_out_form {          
+        padding-right: 300px;       
+    }
 }
