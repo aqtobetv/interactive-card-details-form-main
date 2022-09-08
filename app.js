@@ -38,8 +38,14 @@ function isAllInputsCorrect(){
         let errorMessage = input.parentElement.lastElementChild 
         // debugger              
         if (input.value === ""){            
-            checkMessage("can't be blank", input, errorMessage)            
-        } else if (input.id === "cardholder_number"){
+            checkMessage("can't be blank", input, errorMessage)   
+                     
+        } 
+        else if (input.id === "cardholder_name"){
+            const message = checkIfNameCorrect(input.value)
+            checkMessage(message, input, errorMessage)
+                       
+        }else if (input.id === "cardholder_number"){
             const message = checkIfNumberCorrect(input.value)
             checkMessage(message, input, errorMessage)
                        
@@ -73,14 +79,22 @@ function checkMessage(message, input, errorMessage){
     }   
 }
 
+function checkIfNameCorrect(){    
+    const len = cardholdersName.value.split(" ")   
+    const englishLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    if (len.length !== 2) return "wrong format"    
+    for (let i = 0; i < cardholdersName.value.length; i++){         
+        if (englishLetters.indexOf(cardholdersName.value[i]) === -1 && cardholdersName.value[i] !== " ") return "enter english letters only!"       
+    }    
+    return "correct"
+}
 function checkIfNumberCorrect(){    
     const len = cardholdersNumber.value.split(" ")   
     if (len.length !== 4) return "wrong format"    
     for (let i = 0; i < len.length; i++){         
         if (isNaN(parseInt(len[i])) || parseInt(len[i]) != len[i]) return "wrong format, numbers only!"
         if (len[i].length !== 4) return "must consist 16 number"
-    }
-    
+    }    
     return "correct"
 }
 
@@ -102,11 +116,21 @@ function checkIfExpDateYearCorrect(value) {
     if (expYear < currentYear) return `please enter year more than ${currentYear}`  
     return "correct"
 }
-cardholdersName.addEventListener('input', function(){        
+cardholdersName.addEventListener('input', function(){       
+    cardholdersName.value = cardholdersName.value.toUpperCase()
     cardholdersNamePreview.textContent = cardholdersName.value.toUpperCase()
 })
-cardholdersNumber.addEventListener('input', function(){    
+
+cardholdersNumber.addEventListener('input', function(e){  
+    if (cardholdersNumber.value.length >= 20){
+        cardholdersNumber.value = cardholdersNumber.value.slice(0, cardholdersNumber.value.length - 1)
+    }  
+    if (e.data !== null && [4, 9, 14].indexOf(cardholdersNumber.value.length) !== -1){
+        cardholdersNumber.value = cardholdersNumber.value + " "
+    } else {
+    }
     cardholdersNumberPreview.textContent = cardholdersNumber.value
+   
 })
 expDateMonth.addEventListener('input', function(){   
     expDatePreview.dataset.month =  expDateMonth.value

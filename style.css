@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Epilogue', sans-serif;
 }
 
 .cardLayers{         
@@ -11,22 +11,19 @@ body {
     height: 245px;
     position: relative;
 }
-.background__igm-bg-card-back{    
-    position: absolute;
-    right: 90px;
+.background__igm-bg-card-back{  
     width: 285px;
 }
 .card-background{
-    position: absolute;
-    width: 285px;
-    left: 165px;
-    top: 35px;
+    position: absolute;  
+    left: 73px;
+    top: 34px;
 }
 .card-front{
     position: absolute;
     width: 288px;
     right: 320px;
-    top: 250px;
+    top: 245px;
 }
 .background__igm-bg-card-front{    
     position: absolute;    
@@ -35,9 +32,10 @@ body {
     width: 288px;
 }
 .cardLayers__cardLayers__svv{
-    position: absolute;   
-    right: 127px;
-    top: 68px;
+    position: absolute;
+    right: 38px;
+    font-size: 11px;
+    top: 72px;
     color: white;
 }
 .card-front__card_label{
@@ -50,23 +48,24 @@ body {
     transform: scale(0.65);
 }
 .card-front__card_label--cardholders_name {
-    left: 268px;
+    left: 270px;
     width: 300px;
-    font-size: 13px;
-    font-family: 'Cuprum', sans-serif;
-    letter-spacing: 1px;
+    bottom: -17px;
+    font-size: 10px;    
+    letter-spacing: 0.7px;
 }
 .card-front__card_label--cardholders_card-number {
-    width: 400px;
+    width: 300px;
     bottom: 15px;
     left: 270px;
-    letter-spacing: 4.4px;
+    letter-spacing: 3.2px;
     font-size: 18px;
 }
 .card-front__card_label--cardholders_exp-date{       
-    left: 477px;
+    left: 481px;
+    bottom: -17px;
     letter-spacing: 1.5px;
-    font-size: 12px;
+    font-size: 9px;
 }
 .fill_out_form{
     margin-top: 85px;
@@ -76,7 +75,7 @@ body {
     display: flex;
     font-weight: bold;
     flex-direction: column;
-    margin: 10px auto;
+    margin: 30px auto;
     width: 330px;
     letter-spacing: 2.8px;
 }
@@ -93,12 +92,15 @@ body {
     text-align: left;
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
 }
 .form_block input{
     border-radius: 5px;
     height: 37px;
     border: 1px solid #dfdfdf;
+}
+.form_block--number{
+    margin-bottom: 20px;
 }
 .form_block input::placeholder{
     font-size: 17px;
@@ -126,7 +128,7 @@ body {
     margin: 0 auto;
     width: 330px;
     height: 52px;
-    margin-top: 15px;
+    margin-top: 30px;
     border-radius: 5px;
     color: white;
     background-color: #1d0a2e;
@@ -178,14 +180,7 @@ body {
         width: 452px;
         left: 161px;
         top: 147px;
-    }
-    .card-front__card_label--cardholders_card-number {
-        width: 400px;
-        bottom: -10px;
-        left: -74px;
-        letter-spacing: 5.4px;
-        font-size: 28px;
-    }
+    }    
     .background__igm-bg-card-front {
         left: 0;       
         width: 100%;        
@@ -199,15 +194,15 @@ body {
         left: 35px;
         width: 300px;
         bottom: -10px;
-        font-size: 16px;
+        font-size: 12px;
         letter-spacing: 3.5px;
     }
     .card-front__card_label--cardholders_card-number {
         width: 400px;
         bottom: 35px;
         left: 36px;
-        letter-spacing: 6.8px;
-        font-size: 28px;
+        letter-spacing: 6.6px;
+        font-size: 25px;
     }
     .card-front__card_label--cardholders_exp-date {
         left: 368px;
@@ -234,7 +229,7 @@ body {
         display: flex;
         font-weight: bold;
         flex-direction: column;
-        margin: 25px auto 0 auto;
+        margin: 27px auto 0 auto;
         width: 330px;        
     }
     .fill_out_form__button {
@@ -246,7 +241,7 @@ body {
         display: inline-flex;
         width: 194px;
         margin: 0px;
-        margin-top: 28px;
+        margin-top: 32px;
     }
     .form_block input {        
         width: 375px;        
